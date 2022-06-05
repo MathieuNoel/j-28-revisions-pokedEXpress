@@ -1,0 +1,82 @@
+<%- include('partials/header') %>
+    <div class="container_detail">
+        <header clss="header_detail">
+            <h1 class="detail_h1">Détails de <%= pokemon.nom %> </h1>
+        </header>
+        <img class="detail_img" src="/img/<%= pokemon.numero %>.png" alt="<%= pokemon.nom %> illustration">
+        <main class="main_detail">
+            
+            
+            <div class="stat_detail">
+                <h2 class="detail_h2">#<%= pokemon.numero %> <%= pokemon.nom %></h2>
+                <div class="container_type_of_pokemon">
+                    
+                        <div class="type_of_pokemon" style="background-color:#<%= pokemon.color %>">
+                            <p class="type_name_detail"><%= pokemon.name %></p>
+                        </div>
+                        <div class="type_of_pokemon" style="background-color:#<%= pokemon.second_color %>">
+                            <p class="type_name_detail"><%= pokemon.second_name %></p>
+                        </div>
+                    
+                </div>
+                <div class="type_detail">
+                    
+                    <div>
+                        <p class="p_stat">Statistiques</p>                        
+                    </div>
+                    <div>
+                        <div class="stat">
+                            <p>PV</p>
+                            <p class="pv"><%= pokemon.pv %></p>
+                            <div class="progress_bar" >
+                                <div style="width: <%=pokemon.pv/255*100%>% ;"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <p>Attaque</p>
+                            <p class="attaque"><%= pokemon.attaque %></p>
+                            <div class="progress_bar" >
+                                <div style="width: <%=pokemon.attaque/255*100%>% ;"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <p>defense</p>
+                            <p class="defense"><%= pokemon.defense %></p>
+                            <div class="progress_bar" >
+                                <div style="width: <%=pokemon.defense/255*100%>% ;"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <p>attaque_spe</p>
+                            <p class="attaque_spe"><%= pokemon.attaque_spe %></p>
+                            <div class="progress_bar" >
+                                <div style="width: <%=pokemon.attaque_spe/255*100%>% ;"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <p>defense_spe</p>
+                            <p class="defense_spe"><%= pokemon.defense_spe %></p>
+                            <div class="progress_bar" >
+                                <div style="width: <%=pokemon.defense_spe/255*100%>% ;"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <p>vitesse</p>
+                            <p class="vitesse"><%= pokemon.vitesse %></p>
+                            <div class="progress_bar" >
+                                <div style="width: <%=pokemon.vitesse/255*100%>% ;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer_detail">
+            <div>
+                <a class="footer_a" href="/">Retour à la liste</a>
+            </div>
+        </footer>
+    </div>
+    
+
+<%- include('partials/footer') %>
